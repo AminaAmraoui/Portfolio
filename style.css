@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0
+}
+body{
+    background-color: #eb3552 !important; /* Override style from Bootstrap*/
+    color: white !important;
+    font-family: 'Source Serif Pro',sans-serif !important;
+    font-weight: bold;
+    padding-top: 70px;
+}
+
+/*********** About Section *************/
+#about{
+    height: 80vh; /*section full width screen*/
+}
+.container {
+    margin-top:100px;
+    margin-left: 150px;
+}
+.row {
+    height: 300px !important;
+}
+.row img {
+    width: 250px;
+    height: 250px;
+}
+.row p{
+    font-size: 30px;
+}
+.fa-quote-left {
+    position: absolute;
+    left: 10px;
+    top: -10px
+}
+.fa-quote-right{
+    position: absolute;
+    right: 10px;
+}
+/*********** Projects Section *************/
+#projects{
+    background-color:#70CDE5 !important;
+    padding-top: 50px
+}
+.projects{
+    margin-top:70px;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.project-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px
+}
+
+/** Ovetrlay **/
+.item {
+    display: flex;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+}
+.item > img {
+    width:500px;
+    height: 300px;
+}
+.img-container{
+    position: relative;
+}
+.image{
+    display: block;
+}
+  .overlay {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #2CB1BC;
+  }
+  .img-container:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  /*********** Skills Section *************/
+  #skills{
+      background-color: white !important;
+      padding-top: 50px
+  }
+  .skills-container{
+        margin-top:70px;
+        margin-left: -20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+  }
+  .skill-row{
+      display: flex;
+      justify-content: space-around;
+      margin-left: -20px;
+      margin-bottom: 50px
+  }
+  .skill-row img {
+    /* width: 200px; */
+    height: 200px;
+    display: block;
+  }
+  /** overlay image**/
+  .container-skill {
+    position: relative;
+  }
+  
+  .img-skill {
+    opacity: 1;
+    display: block;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .middle a {
+      text-decoration: none !important;
+      color:white !important
+  }
+  .container-skill:hover .img-skill {
+    opacity: 0.3;
+  }
+  
+  .container-skill:hover .middle {
+    opacity: 1;
+  }
+  
+  .text-skill {
+    background-color: #2CB1BC;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+  /**************** Contact section **************/
+  #contact{
+      background-color: #1abc9c;
+      padding-top: 50px
+  }
+  .fa-envelope{
+     color: white;
+  }
+  #form-contact .row{
+      all:unset
+  }
+  
+  .fa-envelope{
+    position: absolute;
+    left: 100px;
+  }
+  #form-contact{
+      margin-left:10px ;
+  }
+  
+  .col-sm-8 .container{
+    all:unset;
+  }
+  .col-sm-8 .row{
+    height: 100% !important;
+  }
+  /************** Footer *****************/
+  footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #2A2D35;
+  }
+  footer h3 {
+    color: white
+}
+  .footer-paragraph{
+    background-color: #E9E7DD;
+    text-align: center; 
+    font-size: 18px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+  }
+  .footer-paragraph p{
+    color: #2A2D35
+  }
+  .footer-paragraph .fa-heart{
+    color:red
+  }
+  .footer-links{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 30px 50px
+  }
+  .footer-links .fab{
+    color:white
+  }
+  .social-media h3{
+    margin-left: -250px
+  }
+  .social-media{
+    margin-left: -200px
+  }
