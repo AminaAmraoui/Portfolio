@@ -192,17 +192,18 @@ body{
     color: white
 }
   .footer-paragraph{
-    background-color: #E9E7DD;
+    background-color: silver;
     text-align: center; 
     font-size: 18px;
-    height: 70px;
+    height: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center
   }
   .footer-paragraph p{
-    color: #2A2D35
+    color: #2A2D35;
+    margin-top: 20px
   }
   .footer-paragraph .fa-heart{
     color:red
