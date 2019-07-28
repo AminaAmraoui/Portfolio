@@ -6,7 +6,7 @@ let validEmail=false
 
 let inputs = Array.from(document.querySelectorAll('.form-control'))
 
-/**** navbar ******/
+/****************************** navbar ***********************************/
 window.onscroll=function(){
     var scroll = $(window).scrollTop();
     if(scroll < 200){
@@ -17,7 +17,7 @@ window.onscroll=function(){
         document.querySelector('.fixed-top').classList.replace('navbar-dark','navbar-light');
     }
 };
-/************* Submit button **********/ 
+/************************ Submit button ***********************************/ 
 document.getElementById("btn-submit")
        .addEventListener("click", function(e) {
 
@@ -72,4 +72,13 @@ document.getElementById("btn-submit")
         document.querySelector('#contact-form').reset();
     }
 
-});        
+});  
+/******************** FontAwesome Email icon animation ****************/      
+document.querySelector('.fa-envelope')
+       .addEventListener("mouseover", function(e) {
+        document.querySelector('.fa-envelope').classList.add('fa-spin');
+});
+document.querySelector('.fa-envelope')
+       .addEventListener("mouseout", function(e) {
+        document.querySelector('.fa-envelope').classList.remove('fa-spin');
+});
