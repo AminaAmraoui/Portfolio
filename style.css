@@ -222,3 +222,15 @@ body{
   .social-media{
     margin-left: -200px
   }
+  .modal { 
+    display: block; 
+    color: #2A2D35
+  }
+  .modal-header-error{
+    color:white;
+    background-color: #d9534f;
+  }
+  .modal-header-warning{
+    color:white;
+    background-color: #f0ad4e;
+  }
