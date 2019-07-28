@@ -1,7 +1,6 @@
 let name = document.getElementById("name");   
 let email = document.getElementById("email");
 let comment = document.getElementById("comment");
-let msg ="";
 let validInputs =false;
 let validEmail=false
 
@@ -22,50 +21,55 @@ window.onscroll=function(){
 document.getElementById("btn-submit")
        .addEventListener("click", function(e) {
 
+        /* initialize variables*/ 
+        validInputs=false;
+        validEmail=false;
+        name = document.getElementById("name");   
+        email = document.getElementById("email");
+        comment = document.getElementById("comment");
 
         /*** Check empty inputs ***/
     if(name.value === ""){
-        msg=msg+'Name \n';
         name.style.setProperty('border','1px solid red');
     }else {
         name.style.removeProperty('border');
     }
 
     if(email.value === ""){
-        msg=msg+'Email \n';
         email.style.setProperty('border','1px solid red');
     }else {
         email.style.removeProperty('border');
     }
 
     if(comment.value === ""){
-        msg=msg+'Comments ';
         comment.style.setProperty('border','1px solid red');
     }else {
         comment.style.removeProperty('border');
     }
 
     if(inputs.filter(el=>el.value).length!==inputs.length){
-        alert('empty input(s): '+msg);
-        msg=""
+        document.querySelector('#btn-submit').setAttribute('data-toggle','modal');
+        document.querySelector('#btn-submit').setAttribute('data-target','#Check-Modal');
     }else{
-        validInputs=true
+        validInputs=true;
     }
 
          /*** Check valid email ***/
 
     if((email.value.indexOf('@')===-1) && (email.value !=="")){
-        alert('non valid email adress');
+        document.querySelector('#btn-submit').setAttribute('data-toggle','modal');
+        document.querySelector('#btn-submit').setAttribute('data-target','#Email-Modal');
         email.style.setProperty('border','1px solid red');
-    }else if(email.value !==""){
+    }else if((email.value !=="")&& (email.value.indexOf('@')!==-1)){
         email.style.removeProperty('border');
-        validEmail=true
+        validEmail=true;
     }
 
     /**final check **/
     if(validInputs && validEmail){
-        alert('Merci');
-        document.querySelector('#contact-form').reset()
+        document.querySelector('#btn-submit').setAttribute('data-toggle','modal');
+        document.querySelector('#btn-submit').setAttribute('data-target','#Succes-Modal');
+        document.querySelector('#contact-form').reset();
     }
 
 });        
