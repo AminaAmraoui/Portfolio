@@ -27,6 +27,7 @@ document.getElementById("btn-submit")
         name = document.getElementById("name");   
         email = document.getElementById("email");
         comment = document.getElementById("comment");
+        document.querySelector('#Check-Modal .modal-body').innerHTML=""
 
         /*** Check empty inputs ***/
     if(name.value === ""){
@@ -50,6 +51,7 @@ document.getElementById("btn-submit")
     if(inputs.filter(el=>el.value).length!==inputs.length){
         document.querySelector('#btn-submit').setAttribute('data-toggle','modal');
         document.querySelector('#btn-submit').setAttribute('data-target','#Check-Modal');
+        document.querySelector('#Check-Modal .modal-body').innerHTML+='<p>Please check missing inputs</p>'
     }else{
         validInputs=true;
     }
@@ -58,8 +60,8 @@ document.getElementById("btn-submit")
 
     if((email.value.indexOf('@')===-1) && (email.value !=="")){
         document.querySelector('#btn-submit').setAttribute('data-toggle','modal');
-        document.querySelector('#btn-submit').setAttribute('data-target','#Email-Modal');
-        email.style.setProperty('border','1px solid red');
+        document.querySelector('#btn-submit').setAttribute('data-target','#Check-Modal');
+        document.querySelector('#Check-Modal .modal-body').innerHTML+='<p>Invalid email adress</p>'
     }else if((email.value !=="")&& (email.value.indexOf('@')!==-1)){
         email.style.removeProperty('border');
         validEmail=true;
